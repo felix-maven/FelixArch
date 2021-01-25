@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
-import com.felix.felixutils.utils.ITAG
+import com.felix.utils.utils.ITAG
 
 interface ILifecycle : ITAG {
     fun <T> observe(data: LiveData<T>, action: (T) -> Unit) {

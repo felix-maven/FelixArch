@@ -6,14 +6,14 @@ FelixArch is installed by adding the following dependency to your build.gradle f
 
 ```
 dependencies {
-    implementation "com.felix.arch:felix-arch:1.0.0"
+    implementation "com.felix.arch:felix-arch:1.0.1"
 }
 ```
 if you only want the utils you can add the following dependency to your build.gradle file:
 
 ```
 dependencies {
-    implementation "com.felix.utils:felix-utils:1.0.0"
+    implementation "com.felix.utils:felix-utils:1.0.3"
 }
 ```
 
