@@ -1,13 +1,13 @@
-package com.felix.arch.mvvm
+package com.felix.lib_arch.mvvm
 
 import android.app.ProgressDialog
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import com.felix.utils.utils.ITAG
-import com.felix.utils.widget.dialog.IloadDialog
+import com.felix.utils.widget.dialog.ILoadDialog
 
 open class BaseActivity : AppCompatActivity(),
-    IloadDialog,
+    ILoadDialog,
     ITAG {
     override var ctx: Context? = null
         get() = this

@@ -1,12 +1,12 @@
-package com.felix.arch.mvvm
+package com.felix.lib_arch.mvvm
 
 import android.app.ProgressDialog
 import android.content.Context
 import androidx.fragment.app.Fragment
 import com.felix.utils.utils.ITAG
-import com.felix.utils.widget.dialog.IloadDialog
+import com.felix.utils.widget.dialog.ILoadDialog
 
-open class BaseFragment : Fragment(), IloadDialog,
+open class BaseFragment : Fragment(), ILoadDialog,
     ITAG {
     override var ctx: Context? = null
         get() = context
