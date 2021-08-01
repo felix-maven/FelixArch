@@ -6,8 +6,9 @@ import com.felix.lib_arch.mvvm.BaseFragment
 open class BaseMvvmFragment<VM : BaseViewModel> : BaseFragment(), BaseMvvmView<VM> {
 
     override lateinit var viewModel: VM
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         initViewModel()
     }
 }
