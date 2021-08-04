@@ -23,8 +23,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+
+        }
+    }
 }
 apply plugin: 'maven'
+// 上传source
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+artifacts {
+    archives sourcesJar
+}
 uploadArchives {
     repositories.mavenDeployer {
         // 配置本地仓库路径，项目根目录下的repository目录中
@@ -33,6 +46,7 @@ uploadArchives {
         pom.groupId = "com.felix.arch"// 唯一标识（通常为模块包名，也可以任意）
         pom.artifactId = "felix-arch" // 项目名称（通常为类库模块名称，也可以任意）
         pom.version = android.defaultConfig.versionName // 版本号
+//        artifact = sourcesJar
     }
 }
 publish {
@@ -41,7 +55,7 @@ publish {
     artifactId = 'felix-arch'
     publishVersion = android.defaultConfig.versionName
     desc = 'arch for android.'
-    website = 'https://github.com/felix-maven/FelixArch'
+    website = 'https://github.com/felix-maven/bFelixArch'
 }
 //gradlew clean build bintrayUpload -PbintrayUser=felixforever -PbintrayKey=b27dc317644ed376cf84138ff81c9ac8d0ce04ed -PdryRun=false
 dependencies {
